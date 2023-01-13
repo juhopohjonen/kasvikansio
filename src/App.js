@@ -1,15 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Layout from './Layout';
+import Index from './Sites/Index';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Tämä sivusto on kasvikansio.
-        </p>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Layout />}>
+            <Route index element={<Index />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
