@@ -1,6 +1,6 @@
 import { AppBar, createTheme, CssBaseline, ThemeProvider, Toolbar, Typography } from "@mui/material"
 import { Container } from "@mui/system"
-import { Outlet } from "react-router-dom"
+import { Outlet, Link } from "react-router-dom"
 
 const theme = createTheme({
     palette: {
@@ -15,7 +15,7 @@ const Layout = () => {
 
             <AppBar>
                 <Toolbar>
-                    <Typography variant='h6' component='div'>Kasvikansio</Typography>
+                    <Typography variant='h6' sx={{ textDecoration: 'none', color: 'white' }} component={Link} to='/'>Kasvikansio</Typography>
 
                 </Toolbar>
             </AppBar>
