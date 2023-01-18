@@ -19,7 +19,7 @@ const Kasvi = () => {
                 </MuiLink>
 
                 <MuiLink underline="hover" color="inherit" as={Link} to={`/kasvi/${id}`}>
-                    {kasvi.officName ? <>{kasvi.title} ({kasvi.officName})</> : kasvi.title}
+                    {kasvi.officName ? <>{kasvi.title} (<i>{kasvi.officName}</i>)</> : kasvi.title}
                 </MuiLink>
             </Breadcrumbs>
 

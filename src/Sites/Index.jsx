@@ -17,7 +17,7 @@ const Index = () => {
             }}> 
 
                 
-            {kasvit.map(kasvi => <KasviThumb id={kasvi.id} {...kasvi} />)}
+            {kasvit.map(kasvi => <KasviThumb key={kasvi.id} {...kasvi} />)}
 
             <br />
 
