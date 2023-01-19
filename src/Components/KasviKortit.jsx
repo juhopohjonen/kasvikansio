@@ -21,7 +21,7 @@ const KasviThumb = ({ title, officName, images, id }) => {
             { 
                 img ? 
                         <CardActionArea component={Link} to={linkToKasvi}>
-                                <CardMedia component='img' src={img} height="200" width="320" />
+                                <CardMedia component='img' src={img} height="200" width="100" />
                         </CardActionArea>
                 : null
         
@@ -69,7 +69,7 @@ const KasviKortti = ({ images, officName, title, contentArr, infoCard, lahteet }
     return (
         <Card sx={{ maxWidth: '30rem', marginRight: 2, marginBottom: 3 }}>
             { img ? (
-                    <CardMedia id="image" ref={imageRef} component='img' alt={`Eliö, jonka nimi on ${officName ? `${title}, ${officName}` : `${title}`}`} src={img} height="550" />
+                    <CardMedia id="image" ref={imageRef} component='img' alt={`Eliö, jonka nimi on ${officName ? `${title}, ${officName}` : `${title}`}`} src={img} width="10" height="550" />
             ) : null }
             <CardContent>
                 <Typography sx={{ mb: 1.5 }} variant='h5' component='h1'>

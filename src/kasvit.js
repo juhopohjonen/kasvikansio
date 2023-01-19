@@ -1,4 +1,4 @@
-import manty1 from './Kasvikuvat/Mänty/manty.jpg'
+import manty1 from './Kasvikuvat/Mänty/manty1.webp'
 import manty2 from './Kasvikuvat/Mänty/manty2.webp'
 
 class Kasvi {    
