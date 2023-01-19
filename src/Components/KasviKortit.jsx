@@ -105,7 +105,7 @@ const KasviKortti = ({ images, officName, title, contentArr, infoCard, lahteet }
                         ? (
                             <>
                             <Typography variant='h6' component='h3'>Lähteet</Typography>
-                                {lahteet.map((lahde, index) => <Typography key={index} paragraph><MuiLink href={lahde.url}>{lahde.url}</MuiLink>, {lahde.kohde}</Typography>)}
+                                {lahteet.map((lahde, index) => <Typography key={index} paragraph><MuiLink target="_blank" href={lahde.url}>{lahde.url}</MuiLink>, {lahde.kohde}</Typography>)}
                             </>
 
                         )
