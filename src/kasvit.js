@@ -1,6 +1,9 @@
 import manty1 from './Kasvikuvat/Mänty/manty1.webp'
 import manty2 from './Kasvikuvat/Mänty/manty2.webp'
 
+import haapa1 from './Kasvikuvat/Haapa/haapa1.webp'
+import haapa2 from './Kasvikuvat/Haapa/haapa2.webp'
+
 class Kasvi {    
     constructor(title, officName, images, contentArr, infoCard, lahteet) {
         this.title = title
@@ -35,7 +38,12 @@ const kasvit = [
     },
     [
         new Lahde("https://luontoportti.com/t/922/manty", 'Luontoportti')
-    ])
+    ]),
+    
+    new Kasvi('Haapa', 'Populus tremula', [haapa1, haapa2], [], {
+        kuvausaika: '10.1.2023',
+        kuvauspaikka: 'Kaitoväylä (90540)'
+    })
 ]
 
 

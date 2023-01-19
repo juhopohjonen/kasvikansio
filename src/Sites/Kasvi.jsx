@@ -1,9 +1,7 @@
 import { Breadcrumbs, Link as MuiLink } from "@mui/material"
-import { Box } from "@mui/system"
 import { Link, useParams } from "react-router-dom"
 import { KasviKortti } from "../Components/KasviKortit"
 
-import manty1 from '../Kasvikuvat/Mänty/manty.jpg'
 import kasvit from "../kasvit"
 
 const Kasvi = () => {

@@ -1,7 +1,6 @@
 import { Typography } from "@mui/material"
 import { Box } from "@mui/system"
 import { KasviThumb } from "../Components/KasviKortit"
-import manty1 from '../Kasvikuvat/Mänty/manty.jpg'
 
 import kasvit from "../kasvit"
 
