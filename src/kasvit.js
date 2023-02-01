@@ -8,6 +8,10 @@ import harmaalokki1 from './Kasvikuvat/Harmaalokki/lokki.webp'
 
 import nokkosperhonen1 from './Kasvikuvat/Nokkosperhonen/nokkosperhonen.webp'
 
+import rauduskoivu1 from './Kasvikuvat/Rauduskoivu/rauduskoivu1.webp'
+
+import telkka1 from './Kasvikuvat/Telkka/telkka1.webp'
+
 class Kasvi {    
     constructor(title, officName, images, contentArr, infoCard, lahteet) {
         this.title = title
@@ -62,6 +66,16 @@ const kasvit = [
     new Kasvi('Nokkosperhonen', 'Aglais urticae', [nokkosperhonen1], [], {
         kuvausaika: '19.7.2022',
         kuvauspaikka: 'Puutossalmen lossi, Pohjois-Savo'
+    }),
+
+    new Kasvi('Rauduskoivu', 'Betula pendula', [rauduskoivu1], [], {
+        kuvausaika: '10.1.2023',
+        kuvauspaikka: 'Oulun normaalikoulun piha'
+    }),
+
+    new Kasvi('Telkkä', 'Bucephala clangula', [telkka1], [], {
+        kuvausaika: '28.6.2022',
+        kuvauspaikka: 'Jokelantie, Otalampi'
     })
 
 ]
