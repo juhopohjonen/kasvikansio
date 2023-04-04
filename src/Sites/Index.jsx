@@ -7,8 +7,8 @@ import kasvit from "../kasvit"
 const Index = () => {
     return (
         <>
-            <Typography variant='h3' component='h1'>Kasvikansio</Typography>
-            <Typography paragraph>Tämä verkkosivu on kasvikansio.</Typography>
+            <Typography variant='h3' component='h1'>Eliökokoelma</Typography>
+            <Typography paragraph>Eliökokoelma. Juho, 8b</Typography>
 
             <Box sx={{
                 display: 'flex',

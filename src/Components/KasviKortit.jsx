@@ -50,7 +50,10 @@ const KasviThumb = ({ title, officName, images, id }) => {
     )
 }
 
-const KasviKortti = ({ images, officName, title, contentArr, infoCard, lahteet }) => {
+const KasviKortti = (props) => {
+    const { images, officName, title, contentArr, infoCard, lahteet } = props
+    console.log(props)
+    
     const [imageIndex, setIndex] = useState(0)
 
     let img = images[imageIndex]
@@ -112,12 +115,6 @@ const KasviKortti = ({ images, officName, title, contentArr, infoCard, lahteet }
                         : null
                 }
                     
-                <Divider />
-
-                <Typography variant='body2' color='text.secondary' sx={{ mt: 1 }}>
-                    Huomioi, että kuvan laajentaminen vaatii <b>erittäin</b> paljon resursseja, joten heikkotehoinen tietokone voi mennä solmuun kaatumisen johdosta! Jos olet kiinnostunut solmuun laittamisesta, katso video, jossa <MuiLink target="_blank" href="https://www.youtube.com/watch?v=Y1HIDtGZlXI">Raikku laittaa urut solmuun.</MuiLink>
-                </Typography>
-
             </CardContent>
 
         </Card>
@@ -163,9 +160,10 @@ const InfoCard = ({ infoCard, contentArr }) => {
             </List>
 
 
-            {contentArr ? contentArr.map((text, ind) => (
-                        <Typography key={ind} paragraph>{text}</Typography>
-            )) : null}
+            {contentArr ? contentArr.map((text, ind) => {
+                return <Typography key={ind} paragraph>{text}</Typography>
+
+            }) : null}
 
         </>
     )
