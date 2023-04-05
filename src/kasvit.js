@@ -15,6 +15,18 @@ import haisupimikka from './Kasvikuvat/Haisupimikkä/haisupimikka.jpg'
 import haavankeltajakala from './Kasvikuvat/Haavankeltajakala/haavankeltajakala.jpg'
 import porrokaapa from './Kasvikuvat/Porrokaapa/porrokaapa.jpg'
 import jarviruoko from './Kasvikuvat/Jarviruoko/jarviruoko.jpg'
+import metsaetana from './Kasvikuvat/Metsaetana/metsaetana.webp'
+import sinisiipi from './Kasvikuvat/Paatsamansinisiipi/sinisiipi.jpg'
+import lehtokantajaara from './Kasvikuvat/Lehtikantojaara/lehtikantojaara.webp'
+import metsamittari from './Kasvikuvat/Metsamittari/metsamittari.webp'
+import isohely from './Kasvikuvat/Isohelysieniainen/isohelysieni.jpg'
+import laulujoutsen from './Kasvikuvat/Laulujoutsen/laulujoutsen.jpg'
+import rapuhamahakki from './Kasvikuvat/Rapuhamahakki/rapuhamahakki.jpg'
+import huonekarpanen from './Kasvikuvat/Huonekarpanen/huonekarpanen.jpg'
+import ampiaisvieras from './Kasvikuvat/Ampiaisvieras/ampiaisvieras.webp'
+import seinasammal from './Kasvikuvat/Seinasammal/seinasammal.jpg'
+import virnaperhonen from './Kasvikuvat/Virnaperhonen/virnaperhonen.jpg'
+import hamahakki from './Kasvikuvat/Hamahakki/hamahakki.jpg'
 
 class Kasvi {    
     constructor(title, officName, images, contentArr, infoCard, lahteet) {
@@ -129,6 +141,70 @@ const kasvit = [
     new Kasvi('Järviruoko', 'Phragmites australis', [jarviruoko], ['Ruohovartinen kasvi. Kasvaa tyypillisesti rannoilla. Lisääntyy siemenien ja juurakoiden avulla. Ainoa suomessa kasvava ruokolaji: linnut käyttävät ruoikoita ruokailupaikkana.'], {
         kuvausaika: '4.3.2023',
         kuvauspaikka: 'Kuivasjärvi, Oulu'
+    }, [
+        new Lahde('https://luontoportti.com/t/2823/jarviruoko', 'Luontoportti')
+    ]),
+    
+    new Kasvi('Metsäetana', 'Arion fuscus', [metsaetana], ["Elinvoiminen etana. Tummat sivujuovat. Pohjaväriltään kellertävänruskea"], {
+        kuvausaika: '4.7.2022',
+        kuvauspaikka: 'Kuivasranta, Oulu'
+    }, [
+        new Lahde('https://ötökkätieto.fi/species?id=139', 'Ötökkätieto')
+    ]),
+
+    new Kasvi('Paatsamasinisiipi', 'Celastrina argiolus', [sinisiipi], ['Etelä -ja Keski-Suomessa yleinen, yleistynyt lähiaikoina myös pohjoisemmassa. Suomen kansallisperhonen.'], {
+        kuvausaika: '31.5.2023',
+        kuvauspaikka: 'Kuivasranta, Oulu'
+    }),
+
+    new Kasvi('Lehtokantojäärä', 'Rhagium mordax', [lehtokantajaara], [], {
+        kuvausaika: '31.5.2023',
+        kuvauspaikka: 'Kuivasranta, Oulu'
+    }),
+
+    new Kasvi('Metsämittari', 'Ematurga atomaria', [metsamittari], {
+        kuvausaika: '1.6.2022',
+        kuvauspaikka: 'Letonniemen suojelualue, Oulu'
+    }),
+
+    new Kasvi('Isohelysieniäinen', 'Triplax russica', [isohely], [], {
+        kuvausaika: '31.5.2022',
+        kuvauspaikka: 'Ritaharjuntie, Oulu'
+    }),
+    
+    new Kasvi('Laulujoutsen', 'Cygnus cygnus', [laulujoutsen], [], {
+        kuvausaika: '30.5.2023',
+        kuvauspaikka: 'Kuivasjärvi, Oulu'
+    }),
+
+    new Kasvi('Rapuhämähäkki', 'Thomisidae', [rapuhamahakki], [], {
+        kuvausaika: '25.5.2022',
+        kuvauspaikka: 'Mallatsaari, Etelä-Savo'
+    }),
+
+    new Kasvi('Huonekärpänen', 'Musca domestica', [huonekarpanen], [], {
+        kuvausaika: '8.7.2022',
+        kuvauspaikka: 'Ruskotunturi, Oulu'
+    }),
+
+    new Kasvi('Ampiaisvieras', 'Volucella pellucens', [ampiaisvieras], {
+        kuvausaika: '6.7.2022',
+        kuvauspaikka: 'Huutilampi,Oulu'
+    }),
+
+    new Kasvi('Seinäsammal', 'Pleurozium schreberi', [seinasammal], {
+        kuvausaika: '31.1.2023',
+        kuvauspaikka: 'Kaijoharju-Linnanmaa, Oulu'
+    }),
+
+    new Kasvi('Virnaperhonen', 'Leptidea sinapis', [virnaperhonen], {
+        kuvausaika: '31.5.2023',
+        kuvauspaikka: 'Ponsikuja, Oulu'
+    }),
+
+    new Kasvi('Hämähäkki', 'Entelegynae', [hamahakki], {
+        kuvausaika: '11.6.2022',
+        kuvauspaikka: 'Kaijonharju, Oulu'
     })
 
 ,]

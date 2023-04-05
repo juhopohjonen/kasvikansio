@@ -8,7 +8,7 @@ const Index = () => {
     return (
         <>
             <Typography variant='h3' component='h1'>Eliökokoelma</Typography>
-            <Typography paragraph>Eliökokoelma. Juho, 8b</Typography>
+            <Typography paragraph>Eliökokoelma. Juho, 8b. Eliöiden määrä: <b>{kasvit.length}</b>.</Typography>
 
             <Box sx={{
                 display: 'flex',
