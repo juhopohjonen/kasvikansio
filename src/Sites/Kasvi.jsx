@@ -1,4 +1,4 @@
-import { Breadcrumbs, Link as MuiLink } from "@mui/material"
+import { Breadcrumbs, Link as MuiLink, Typography } from "@mui/material"
 import { Link, useParams } from "react-router-dom"
 import { KasviKortti } from "../Components/KasviKortit"
 
@@ -7,6 +7,15 @@ import kasvit from "../kasvit"
 const Kasvi = () => {
     const { id } = useParams()
     const kasvi = kasvit.find(kasvi => kasvi.id === id)
+
+    if (!kasvi) {
+        return (
+            <>
+                <Typography variant='h1'>Ei löydy</Typography>
+                <Typography paragraph>Osumaa ei löytynyt.</Typography>
+            </>
+        )
+    }
 
 
     return (

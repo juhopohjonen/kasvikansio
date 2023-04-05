@@ -7,6 +7,7 @@ import AspectRatioIcon from '@mui/icons-material/AspectRatio';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import RoomIcon from '@mui/icons-material/Room';
 import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
+import YardIcon from '@mui/icons-material/Yard';
 
 const KasviThumb = ({ title, officName, images, id }) => {
     const linkToKasvi = `/kasvi/${id}`
@@ -51,7 +52,7 @@ const KasviThumb = ({ title, officName, images, id }) => {
 }
 
 const KasviKortti = (props) => {
-    const { images, officName, title, contentArr, infoCard, lahteet } = props
+    const { images, officName, title, contentArr, infoCard, lahteet, kasvupaikka } = props
     console.log(props)
     
     const [imageIndex, setIndex] = useState(0)
@@ -101,7 +102,7 @@ const KasviKortti = (props) => {
                 <Typography sx={{ mt: 1 }} color='text.secondary' textAlign='right' variant='body1' paragraph><b>Kuva {imageIndex + 1} / {images.length}</b></Typography>
 
 
-                <InfoCard infoCard={infoCard} contentArr={contentArr} />
+                <InfoCard infoCard={infoCard} contentArr={contentArr} kasvupaikka={kasvupaikka} />
             
                 {
                     lahteet && lahteet.length > 0 
@@ -114,6 +115,12 @@ const KasviKortti = (props) => {
                         )
                         : null
                 }
+
+            
+            <Typography variant='p' color='text.secondary'>
+                Kuva ei automaattisesti näy kokonaan: katso koko kuva klikkaamalla laajenna-näppäintä.
+            </Typography>
+
                     
             </CardContent>
 
@@ -121,7 +128,7 @@ const KasviKortti = (props) => {
     )
 }
 
-const InfoCard = ({ infoCard, contentArr }) => {
+const InfoCard = ({ infoCard, contentArr, kasvupaikka }) => {
     if (!infoCard) {
         return null
     }
@@ -157,6 +164,19 @@ const InfoCard = ({ infoCard, contentArr }) => {
                         </ListItem>
                     ) : null
                 }
+
+                {
+                    kasvupaikka ? (
+                        <ListItem>
+                            <ListItemAvatar>
+                                <Avatar>
+                                    <YardIcon />
+                                </Avatar>
+                            </ListItemAvatar>
+                            <ListItemText primary={kasvupaikka} secondary="Kasvupaikka" />
+                        </ListItem>
+                    ) : null
+                }
             </List>
 
 
@@ -165,6 +185,7 @@ const InfoCard = ({ infoCard, contentArr }) => {
 
             }) : null}
 
+            <Divider />
         </>
     )
 }

@@ -1,12 +1,11 @@
 import manty1 from './Kasvikuvat/Mänty/manty1.webp'
 import manty2 from './Kasvikuvat/Mänty/manty2.webp'
-
 import haapa1 from './Kasvikuvat/Haapa/haapa1.webp'
 import haapa2 from './Kasvikuvat/Haapa/haapa2.webp'
-
 import harmaalokki1 from './Kasvikuvat/Harmaalokki/lokki.webp'
 import nokkosperhonen1 from './Kasvikuvat/Nokkosperhonen/nokkosperhonen.webp'
 import rauduskoivu1 from './Kasvikuvat/Rauduskoivu/rauduskoivu1.webp'
+import rauduskoivu2 from './Kasvikuvat/Rauduskoivu/rauduskoivu2.webp'
 import telkka1 from './Kasvikuvat/Telkka/telkka1.webp'
 import kalvolude from './Kasvikuvat/Kalvolude/kalvolude1.webp'
 import sormipaisukarve from './Kasvikuvat/Sormipaisukarve/sormi.jpg'
@@ -27,9 +26,10 @@ import ampiaisvieras from './Kasvikuvat/Ampiaisvieras/ampiaisvieras.webp'
 import seinasammal from './Kasvikuvat/Seinasammal/seinasammal.jpg'
 import virnaperhonen from './Kasvikuvat/Virnaperhonen/virnaperhonen.jpg'
 import hamahakki from './Kasvikuvat/Hamahakki/hamahakki.jpg'
+import samettipunkki from './Kasvikuvat/Samettipunkki/samettipunkki.jpg'
 
 class Kasvi {    
-    constructor(title, officName, images, contentArr, infoCard, lahteet) {
+    constructor(title, officName, images, contentArr, infoCard, lahteet, kasvupaikka) {
         this.title = title
         this.officName = officName
         this.images = images
@@ -45,6 +45,7 @@ class Kasvi {
         this.contentArr = contentArr
         this.infoCard = infoCard
         this.lahteet = lahteet
+        this.kasvupaikka = kasvupaikka
     }
 }
 
@@ -62,7 +63,7 @@ const kasvit = [
     },
     [
         new Lahde("https://luontoportti.com/t/922/manty", 'Luontoportti')
-    ]),
+    ], 'Niin soilla kuin metsissäkin'),
     
     new Kasvi('Haapa', 'Populus tremula', [haapa1, haapa2], [
         'Haapa kasvaa esimerkiksi kuivissa, tuoressa, lehtomaisissa kangasmetsissä sekä rehevissä korvissa.'
@@ -84,10 +85,10 @@ const kasvit = [
         kuvauspaikka: 'Puutossalmen lossi, Pohjois-Savo'
     }),
 
-    new Kasvi('Rauduskoivu', 'Betula pendula', [rauduskoivu1], [], {
+    new Kasvi('Rauduskoivu', 'Betula pendula', [rauduskoivu1, rauduskoivu2], ['Katso kuva 2!'], {
         kuvausaika: '10.1.2023',
         kuvauspaikka: 'Oulun normaalikoulun piha'
-    }),
+    }, [new Lahde('https://heinavesi.fi/rauduskoivu', 'Heinävesi')], 'Keski -ja runsasravinteiset kasvupaikat'),
 
     new Kasvi('Telkkä', 'Bucephala clangula', [telkka1], [], {
         kuvausaika: '28.6.2022',
@@ -107,14 +108,6 @@ const kasvit = [
         new Lahde('https://www.luopioistenkasvisto.fi/Sivut/jakalat/sormipaisukarve.html', 'Luopioisten kasvisto')
     ]
     ),
-    
-    new Kasvi('Kurki', 'Grus grus', [kurki], ['Kurki on suuri lintu, jonka arvioitu pesimäkanta Suomessa on n. 40 000 paria. Se talvehti Pohjois-Arfrikassa. Tuntomerkkeinä pitkät jalat ja kaula. Harmaa lintu.'], {
-        kuvausaika: '20.7.2022',
-        kuvauspaikka: 'Juonionlahti, Kuopio'
-    },
-    [
-        new Lahde('https://luontoportti.com/t/599/kurki', 'Luontoportti')
-    ]),
 
     new Kasvi('Haisupimikkä', 'Bolitophagus reticulatus', [haisupimikka], ['Haisupimikkä on kovakuoriainen. Haisupimikkä voi kuoriutua esimerkiksi taulakäävästä. Sen uhanalaisuusluokitus on elinvoimainen., '], {
         kuvausaika: '31.5.2022',
@@ -128,7 +121,9 @@ const kasvit = [
     new Kasvi('Haavankeltajäkälä', 'Xanthoria parietina', [haavankeltajakala], ['Haavankeltajäkälä on ruusukkeina kasvava keltainen jäkälä.'], {
         kuvausaika: '4.3.2023',
         kuvauspaikka: 'Linnanmaa, Oulu'
-    },),
+    }, [new Lahde('https://kasvio.avoin.jyu.fi/laji.php?id=354', 'Valokki-nettikasvio')],
+    'Puiden rungoilla'
+    ),
 
     new Kasvi('Pörrökääpä', 'Cerrena unicolor', [porrokaapa], ['Pörrökääpä on Suomessa yleinen kääpälaji. Sen uhanalaisuusluokitus Suomessa on elinvoimainen. Kyseinen kääpälaji aiheittaa valkolahoa lehtipuilla.'], {
         kuvausaika: '4.3.2023',
@@ -136,7 +131,7 @@ const kasvit = [
     },
     [
         new Lahde('https://inaturalist.laji.fi/taxa/194476-Cerrena-unicolor', 'iNaturalist Fi (Laji.fi)')
-    ]),
+    ], 'Tyypillisesti koivut isäntäpuina.'),
 
     new Kasvi('Järviruoko', 'Phragmites australis', [jarviruoko], ['Ruohovartinen kasvi. Kasvaa tyypillisesti rannoilla. Lisääntyy siemenien ja juurakoiden avulla. Ainoa suomessa kasvava ruokolaji: linnut käyttävät ruoikoita ruokailupaikkana.'], {
         kuvausaika: '4.3.2023',
@@ -192,10 +187,12 @@ const kasvit = [
         kuvauspaikka: 'Huutilampi,Oulu'
     }),
 
-    new Kasvi('Seinäsammal', 'Pleurozium schreberi', [seinasammal], {
+    new Kasvi('Seinäsammal', 'Pleurozium schreberi', [seinasammal], [], {
         kuvausaika: '31.1.2023',
         kuvauspaikka: 'Kaijoharju-Linnanmaa, Oulu'
-    }),
+    }, [
+        new Lahde('https://www.upmforestlife.com/fi/lajit/sein%C3%A4sammal#:~:text=Sein%C3%A4sammal%20kasvaa%20maassa%2C%20lahopuilla%2C%20kivill%C3%A4,on%20aikanaan%20k%C3%A4ytetty%20seinien%20tiivist%C3%A4miseen.', 'Upm Forest Life')
+    ], 'Maassa, lahopuilla, kivillä, rämeiden mättäillä'),
 
     new Kasvi('Virnaperhonen', 'Leptidea sinapis', [virnaperhonen], {
         kuvausaika: '31.5.2023',
@@ -205,7 +202,20 @@ const kasvit = [
     new Kasvi('Hämähäkki', 'Entelegynae', [hamahakki], {
         kuvausaika: '11.6.2022',
         kuvauspaikka: 'Kaijonharju, Oulu'
-    })
+    }),
+
+    new Kasvi('Samettipunkki', 'Trombidium', [samettipunkki], [], {
+        kuvausaika: '1.6.2022',
+        kuvauspaikka: 'Letonniemen suojelualue'
+    }),
+
+    new Kasvi('Kurki', 'Grus grus', [kurki], ['Kurki on suuri lintu, jonka arvioitu pesimäkanta Suomessa on n. 40 000 paria. Se talvehti Pohjois-Arfrikassa. Tuntomerkkeinä pitkät jalat ja kaula. Harmaa lintu.'], {
+        kuvausaika: '20.7.2022',
+        kuvauspaikka: 'Juonionlahti, Kuopio'
+    },
+    [
+        new Lahde('https://luontoportti.com/t/599/kurki', 'Luontoportti')
+    ])
 
 ,]
 

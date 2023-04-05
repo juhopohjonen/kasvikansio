@@ -15,7 +15,7 @@ const Layout = () => {
 
             <AppBar>
                 <Toolbar>
-                    <Typography variant='h6' sx={{ textDecoration: 'none', color: 'white' }} component={Link} to='/'>Kasvikansio</Typography>
+                    <Typography variant='h6' sx={{ textDecoration: 'none', color: 'white' }} component={Link} to='/'>Eliökokoelma</Typography>
 
                 </Toolbar>
             </AppBar>

@@ -13,6 +13,7 @@ function App() {
             <Route index element={<Index />} />
 
             <Route path='kasvi/:id' element={<Kasvi />} />
+            <Route path='*' element={<h1>404 - Ei löydy</h1>} />
 
           </Route>
         </Routes>
