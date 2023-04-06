@@ -157,7 +157,7 @@ const kasvit = [
         kuvauspaikka: 'Kuivasranta, Oulu'
     }),
 
-    new Kasvi('Metsämittari', 'Ematurga atomaria', [metsamittari], {
+    new Kasvi('Metsämittari', 'Ematurga atomaria', [metsamittari], [], {
         kuvausaika: '1.6.2022',
         kuvauspaikka: 'Letonniemen suojelualue, Oulu'
     }),
@@ -182,7 +182,7 @@ const kasvit = [
         kuvauspaikka: 'Ruskotunturi, Oulu'
     }),
 
-    new Kasvi('Ampiaisvieras', 'Volucella pellucens', [ampiaisvieras], {
+    new Kasvi('Ampiaisvieras', 'Volucella pellucens', [ampiaisvieras], [], {
         kuvausaika: '6.7.2022',
         kuvauspaikka: 'Huutilampi,Oulu'
     }),
@@ -194,12 +194,12 @@ const kasvit = [
         new Lahde('https://www.upmforestlife.com/fi/lajit/sein%C3%A4sammal#:~:text=Sein%C3%A4sammal%20kasvaa%20maassa%2C%20lahopuilla%2C%20kivill%C3%A4,on%20aikanaan%20k%C3%A4ytetty%20seinien%20tiivist%C3%A4miseen.', 'Upm Forest Life')
     ], 'Maassa, lahopuilla, kivillä, rämeiden mättäillä'),
 
-    new Kasvi('Virnaperhonen', 'Leptidea sinapis', [virnaperhonen], {
+    new Kasvi('Virnaperhonen', 'Leptidea sinapis', [virnaperhonen], [], {
         kuvausaika: '31.5.2023',
         kuvauspaikka: 'Ponsikuja, Oulu'
     }),
 
-    new Kasvi('Hämähäkki', 'Entelegynae', [hamahakki], {
+    new Kasvi('Hämähäkki', 'Entelegynae', [hamahakki], [], {
         kuvausaika: '11.6.2022',
         kuvauspaikka: 'Kaijonharju, Oulu'
     }),
